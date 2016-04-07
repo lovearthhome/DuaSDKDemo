@@ -40,6 +40,7 @@ import static android.Manifest.permission.READ_CONTACTS;
 
 /**
  * A login screen that offers login via email/password.
+ * 添加
  */
 public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor> {
 
@@ -90,7 +91,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }
         });
 
-        Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
+        Button mEmailSignInButton = (Button) findViewById(R.id.login);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -111,7 +112,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         stopButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("NetworkStatus",dua.getNetworkStatus());
+                Log.d("NetworkStatus", dua.getNetworkStatus());
             }
         });
 
@@ -120,7 +121,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         loginButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                dua.login("+86-14789568702","111111","member",null);
+                dua.login("+86-14789568702", "111111", "member", null);
             }
         });
 
@@ -149,8 +150,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
 
 
-
-        mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
     }
 
