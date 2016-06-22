@@ -7,7 +7,10 @@ import java.util.Date;
 
 public class TimeUtil {
     public static String getCurrentTimeString(){
-        return toTimeString(Calendar.getInstance().getTimeInMillis());
+        return toTimeString(getCurrentTimeStamp());
+    }
+    public static String getCurrentTimeString(String fmt){
+        return toTimeString(getCurrentTimeStamp(),fmt);
     }
     public static long getCurrentTimeStamp(){
         return Calendar.getInstance().getTimeInMillis();
@@ -22,10 +25,13 @@ public class TimeUtil {
         calendar.add(Calendar.DATE, ds);
         return calendar.getTimeInMillis();
     }
-    public static String toTimeString(long ts,String... fmt){
-        if(fmt.length!=1) fmt=new String[]{"yyyy-MM-dd HH:mm:ss:SS"};
+    public static String toTimeString(long ts){
+        return toTimeString(ts,null);
+    }
+    public static String toTimeString(long ts,String fmt){
+        if(fmt==null||fmt.equals("")) fmt="yyyy-MM-dd HH:mm:ss:SS";
         try {
-            SimpleDateFormat dateFormat = new SimpleDateFormat(fmt[0]);
+            SimpleDateFormat dateFormat = new SimpleDateFormat(fmt);
             Calendar calendar=Calendar.getInstance();
             calendar.setTimeInMillis(ts);
             String timeStr = dateFormat.format(calendar.getTime());
