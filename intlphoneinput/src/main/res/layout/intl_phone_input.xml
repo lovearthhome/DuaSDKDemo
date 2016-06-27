@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/label_text_color"
+            android:text="国家/地区"
+            android:textAlignment="textEnd"
+            android:gravity="center_vertical|end"
+            android:paddingRight="10sp"
+            android:textSize="@dimen/label_text_size" />
+
+        <!--各个国家国旗高宽比是不一样的，这个地方，我们就让他们大小相同-->
+        <ImageView
+            android:id = "@+id/country_icon"
+            android:layout_marginLeft="110dp"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:src="@drawable/country_cn"/>
+        <TextView
+            android:id = "@+id/country_name"
+            android:layout_marginLeft="150dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="中国"
+            android:gravity="center_vertical"
+            android:paddingLeft="10sp"
+            android:singleLine="true"
+            android:textColor="@color/label_text_color"
+            android:textSize="@dimen/label_text_size"/>
+
+
+        <ImageView
+            android:id = "@+id/country_other"
+            android:layout_alignParentRight="true"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:scaleType="centerInside"
+            android:src="@drawable/forwardgray"/>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/border_line_color" />
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="48dp"
+       android:orientation="horizontal">
+       <!--让textView里面的内容水平居中 :    android:gravity="center_horizontal"-->
+       <!--让textView控件在它的父布局里水平居中     android:layout_gravity="center_horizontal"-->
+       <TextView
+           android:id = "@+id/country_code"
+           android:layout_width="100dp"
+           android:layout_height="match_parent"
+           android:text="+86"
+           android:textAlignment="textEnd"
+           android:gravity="center_vertical|end"
+           android:paddingRight="10sp"
+           android:textSize="@dimen/label_text_size" />
+       <View
+           android:layout_width="2dp"
+           android:layout_height="88dp"
+           android:background="@color/border_line_color" />
+
+       <!--android:background="@null" 去掉边框-->
+       <EditText
+           android:id="@+id/intl_phone_edit__phone"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:background="@null"
+           android:hint="请输入手机号"
+           android:gravity="center_vertical"
+           android:paddingLeft="10sp"
+           android:singleLine="true"
+           android:textSize="@dimen/input_text_size"
+           android:inputType="phone" />
+
+   </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/border_line_color" />
+</LinearLayout>

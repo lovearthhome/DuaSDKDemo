@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">IntlPhoneInput</string>
+    <string name="item_image_contentDescription">Country flag</string>
+    <string name="item_preview_country">Israel (‫ישראל‬‎)</string>
+    <string name="item_preview_dialCode">+972</string>
+
+    <string name="ccs_phone_hint">Phone number</string>
+    <string name="ccs_search_hint">Search …</string>
+    <string name="ccs_invalid_country_code">Invalid country code</string>
+    <string name="ccs_choose_a_country">选择国家或地区</string>
+</resources>

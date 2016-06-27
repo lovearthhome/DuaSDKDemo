@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/DatePicker/DatePicker.iml" filepath="$PROJECT_DIR$/DatePicker/DatePicker.iml" />
       <module fileurl="file://$PROJECT_DIR$/DuaSDKDemo.iml" filepath="$PROJECT_DIR$/DuaSDKDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WheelPicker/WheelPicker.iml" filepath="$PROJECT_DIR$/WheelPicker/WheelPicker.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/duasdk/duasdk.iml" filepath="$PROJECT_DIR$/duasdk/duasdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/intlphoneinput/intlphoneinput.iml" filepath="$PROJECT_DIR$/intlphoneinput/intlphoneinput.iml" />
     </modules>
   </component>
 </project>

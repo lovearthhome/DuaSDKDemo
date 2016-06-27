@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="theme_color">#00BC00</color>
     <color name="common_top_bar_blue">#3F51B5</color>
+    <color name="link_color">#3F51B5</color>
 </resources>

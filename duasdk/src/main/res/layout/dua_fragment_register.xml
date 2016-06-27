@@ -10,34 +10,62 @@
         android:id="@+id/dua_register_input_phone" />
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="54dp"
         android:orientation="horizontal">
-        <EditText
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="180dp"
             android:layout_height="match_parent"
-            android:hint="@string/dua_prompt_vf_code"
-            android:id="@+id/dua_register_input_vf_code" />
+            android:orientation="vertical">
+            <EditText
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/dua_prompt_vf_code"
+                android:gravity="center_vertical"
+                android:paddingLeft="10sp"
+                android:background="@null"
+                android:singleLine="true"
+                android:textSize="@dimen/input_text_size"
+                android:id="@+id/dua_register_input_vf_code" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/border_line_color" />
+        </LinearLayout>
+
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/dua_button_get_vf_code"
+            android:gravity="center_vertical"
+            android:background="@drawable/btn_normal"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:paddingLeft="10sp"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textSize="@dimen/input_text_size"
             android:id="@+id/dua_register_button_get_vf_code"/>
+
     </LinearLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="48dp" >
 
         <EditText
             android:id="@+id/dua_et_password"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_centerVertical="true"
             android:hint="@string/dua_prompt_pwd"
+            android:background="@null"
             android:inputType="textPassword"
+            android:gravity="center_vertical"
+            android:paddingLeft="10sp"
             android:singleLine="true"
-            android:textColorHint="#DDDDDD"
-            android:textSize="16sp" />
+            android:textSize="@dimen/input_text_size"
+            />
 
         <!--<TextView-->
             <!--android:id="@+id/dua_tv_password"-->
@@ -72,7 +100,12 @@
                 android:src="@drawable/agu"
                 android:visibility="gone" />
         </LinearLayout>
+
     </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/border_line_color" />
     <!--<EditText-->
         <!--android:id="@+id/dua_register_input_pwd"-->
         <!--android:layout_width="match_parent"-->
@@ -94,12 +127,37 @@
         <!--android:inputType="textPassword"-->
         <!--android:maxLines="1"-->
         <!--android:singleLine="true" />-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:text="点击下一步将视为您已接受"
+            android:textAlignment="textEnd"
+            android:gravity="center_vertical|end"
+            android:textSize="16sp" />
+        <TextView
+            android:id = "@+id/country_code"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:text="水果篮APP使用协议"
+            android:textAlignment="textStart"
+            android:gravity="center_vertical|start"
+            android:paddingRight="10sp"
+            android:textColor="@color/link_color"
+            android:textSize="15sp" />
 
+    </LinearLayout>
     <Button
         android:id="@+id/dua_register_button_next_step"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:background="@drawable/btn_register_bg"
         android:text="@string/dua_button_next_step"
         android:textStyle="bold" />
+
 </LinearLayout>

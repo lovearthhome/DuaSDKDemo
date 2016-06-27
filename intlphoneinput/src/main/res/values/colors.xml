@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ccs_default_color">#3743af</color>
+    <!--微信登陆界面的提示字体C4.炸弹色-->
+    <color name="hint_text_color">#C4C4C4</color>
+    <!--微信登陆界面的标签字体0.纯黑-->
+    <color name="label_text_color">#000</color>
+    <!--微信登陆界面的隔界颜色-->
+    <color name="border_line_color">#DCDCDC</color>
+</resources>

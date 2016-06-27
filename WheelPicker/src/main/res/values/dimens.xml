@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--通用尺寸-->
+    <!--General sizes-->
+    <dimen name="WheelItemSpace">8dp</dimen>
+    <dimen name="WheelPadding">8dp</dimen>
+    <dimen name="WheelTextSize">20sp</dimen>
+
+    <dimen name="WheelLabelTextSize">24sp</dimen>
+    <dimen name="TextSizeLarge">36sp</dimen>
+    <dimen name="ItemSpaceLarge">24dp</dimen>
+</resources>

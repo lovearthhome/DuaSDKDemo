@@ -8,12 +8,13 @@
     <application
         android:allowBackup="true"
         android:supportsRtl="true">
-        <activity
-            android:name=".ui.DuaActivityLogin"
-            android:theme="@style/AppThemeNoActionBar">
+        <!--android:theme="@style/AppThemeNoActionBar"-->
+        <activity android:name=".ui.DuaActivityLogin"  android:theme="@style/AppThemeNoActionBar">
+
         </activity>
-        <activity android:name=".ui.DuaActivityRegister"
-            android:theme="@style/AppThemeNoActionBar">
+        <!--android:theme="@style/AppThemeNoActionBar">-->
+        <activity android:name=".ui.DuaActivityRegister" android:theme="@style/AppThemeNoActionBar">
+
         </activity>
         <activity android:name=".ui.DuaActivityProfile"></activity>
     </application>

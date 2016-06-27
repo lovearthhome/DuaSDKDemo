@@ -1,10 +1,7 @@
 package com.lovearthstudio.duasdk.ui;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.os.Looper;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
@@ -15,20 +12,14 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.google.gson.Gson;
 import com.lovearthstudio.duasdk.DuaConfig;
 import com.lovearthstudio.duasdk.Dua;
 import com.lovearthstudio.duasdk.DuaCallback;
 import com.lovearthstudio.duasdk.R;
 import com.lovearthstudio.duasdk.util.AlertUtil;
-import com.lovearthstudio.duasdk.util.LogUtil;
-
 import net.rimoto.intlphoneinput.IntlPhoneInput;
 
 public class DuaActivityLogin extends AppCompatActivity {
-    private Toolbar toolbar;
     private Button mSignInButton;
     private IntlPhoneInput phoneInputView;
     private EditText mPasswordView;
@@ -38,17 +29,9 @@ public class DuaActivityLogin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dua_activity_login);
-        toolbar=(Toolbar)findViewById(R.id.dua_toolbar);
-        toolbar.setTitle("");
-        TextView title = (TextView) findViewById(R.id.dua_toolbar_title);
-        title.setText("登录");
-        setSupportActionBar(toolbar);
-//        ActionBar actionBar=getSupportActionBar();
-//        if(actionBar!=null){
-//            actionBar.setDisplayShowTitleEnabled(false);
-//            actionBar.setHomeButtonEnabled(true);
-//            actionBar.setDisplayHomeAsUpEnabled(true);
-//        }
+
+
+
         DuaConfig.loadConfig(getIntent());
         callbackIntent=DuaConfig.getLoginCallbackIntent();
 

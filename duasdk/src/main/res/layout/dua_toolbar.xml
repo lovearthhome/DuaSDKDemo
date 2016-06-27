@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.Toolbar
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<android.support.v7.widget.Toolbar
     android:id="@+id/dua_toolbar"
     android:layout_width="match_parent"
-    android:layout_height="?attr/actionBarSize">
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/theme_color"
+    android:elevation="0dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    android:transitionName="actionBar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+    <!--背景颜色为 ActionBar 的背景颜色-->
+    <!--返回按钮的图标-->
+
     <ImageView
         android:id="@+id/iv_back"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:scaleType="centerInside"
         android:src="@drawable/top_bar_back" />
     <TextView
@@ -17,3 +31,6 @@
         android:layout_gravity="center"
         android:singleLine="true" />
 </android.support.v7.widget.Toolbar>
+</FrameLayout>
+
+

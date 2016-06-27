@@ -19,14 +19,18 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.google.code.gson:gson:2.6.2'
     compile 'com.squareup.okhttp3:okhttp:3.2.0'
-    compile 'net.rimoto:intlphoneinput:0.9.3'
     compile 'cn.qqtheme.framework:WheelPicker:1.1.2'
-    compile 'com.android.support:appcompat-v7:23.3.0'
-    compile 'com.android.support:design:23.3.0'
-    compile 'com.android.support:support-v4:23.3.0'
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile 'com.android.support:design:23.2.1'
+    compile 'com.android.support:support-v4:23.2.1'
     compile 'com.alibaba:fastjson:1.2.11'
+    //compile project(':intlphoneinput')
+    compile project(':intlphoneinput')
+    compile project(':DatePicker')
+    compile project(':WheelPicker')
+    compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
 }

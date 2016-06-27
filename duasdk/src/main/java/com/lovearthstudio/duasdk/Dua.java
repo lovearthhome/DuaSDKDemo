@@ -698,14 +698,14 @@ public class Dua {
         if(mcb!=null){
             mcb.onSuccess(str);
         }else{
-            LogUtil.e(tag,str);
+            //LogUtil.e(tag,str);
         }
     }
     private void callbackOnError(DuaCallback mcb,String tag,String str){
         if(mcb!=null){
             mcb.onError(str);
         }else{
-            LogUtil.e(tag,str);
+//            LogUtil.e(tag,str);
         }
     }
 

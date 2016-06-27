@@ -1,29 +1,31 @@
 package com.lovearthstudio.duasdk.ui;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.os.Build;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.widget.Button;
+import android.view.View;
 import android.widget.TextView;
+
 
 import com.lovearthstudio.duasdk.Dua;
 import com.lovearthstudio.duasdk.DuaCallback;
 import com.lovearthstudio.duasdk.DuaConfig;
 import com.lovearthstudio.duasdk.R;
 import com.lovearthstudio.duasdk.util.AlertUtil;
+import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.RecursiveAction;
 
-public class DuaActivityRegister extends AppCompatActivity{
+public class DuaActivityRegister extends AppCompatActivity {
     public CustomViewPager viewPager;
-    private Toolbar toolbar;
+    private Toolbar mToolbar;
     public List<Fragment> fragments;
 
     public String ustr;
@@ -37,10 +39,31 @@ public class DuaActivityRegister extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dua_activity_register);
-        toolbar=(Toolbar)findViewById(R.id.dua_toolbar);
-        toolbar.setTitle("");
-        TextView title=(TextView)findViewById(R.id.dua_toolbar_title);
+        //设定状态栏的颜色，当版本大于4.4时起作用
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            SystemBarTintManager tintManager = new SystemBarTintManager(this);
+            tintManager.setStatusBarTintEnabled(true);
+            tintManager.setStatusBarTintResource(android.R.color.holo_blue_bright);
+            // set a custom tint color for all system bars
+            tintManager.setTintColor(Color.parseColor("#00ff00"));
+            // set a custom navigation bar resource
+            //tintManager.setNavigationBarTintResource(R.drawable.my_tint);
+            // set a custom status bar drawable
+            //tintManager.setStatusBarTintDrawable(MyDrawable);
+        }
+        Toolbar toolbar = (Toolbar) findViewById(R.id.dua_toolbar);
+        toolbar.setTitle("注册");
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        // Handle Back Navigation :D
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DuaActivityRegister.this.onBackPressed();
+            }
+        });
+
 //        ActionBar actionBar=getSupportActionBar();
 //        if(actionBar!=null){
 //            actionBar.setDisplayShowTitleEnabled(false);
@@ -74,17 +97,20 @@ public class DuaActivityRegister extends AppCompatActivity{
                     fragments.add(new DuaFragmentProfileBirthday());
                 }
             } else {
+                fragments.add(new DuaFragmentProfileBirthday());
+
                 fragments.add(new DuaFragmentRegister());
                 fragments.add(new DuaFragmentProfileSex());
-                fragments.add(new DuaFragmentProfileBirthday());
+
             }
         }else{
+            fragments.add(new DuaFragmentProfileBirthday());
             fragments.add(new DuaFragmentRegister());
             fragments.add(new DuaFragmentProfileSex());
-            fragments.add(new DuaFragmentProfileBirthday());
+
         }
 
-        title.setText(titleStr);
+//        title.setText(titleStr);
         viewPager.setAdapter(new SectionsPagerAdapter(getSupportFragmentManager()));
         viewPager.setSwipEnabled(false);
     }

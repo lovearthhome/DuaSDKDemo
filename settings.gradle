@@ -1,1 +1,1 @@
-include ':app', ':duasdk'
+include ':app', ':duasdk', ':intlphoneinput', ':DatePicker', ':WheelPicker'
